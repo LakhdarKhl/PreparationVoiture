@@ -1,0 +1,14 @@
+C:\Users\nanon\Documents\GitHubPublic\PreparationVoiture\PreparationVoiture\bin\Debug\net6.0\PreparationVoiture.exe
+C:\Users\nanon\Documents\GitHubPublic\PreparationVoiture\PreparationVoiture\bin\Debug\net6.0\PreparationVoiture.deps.json
+C:\Users\nanon\Documents\GitHubPublic\PreparationVoiture\PreparationVoiture\bin\Debug\net6.0\PreparationVoiture.runtimeconfig.json
+C:\Users\nanon\Documents\GitHubPublic\PreparationVoiture\PreparationVoiture\bin\Debug\net6.0\PreparationVoiture.dll
+C:\Users\nanon\Documents\GitHubPublic\PreparationVoiture\PreparationVoiture\bin\Debug\net6.0\PreparationVoiture.pdb
+C:\Users\nanon\Documents\GitHubPublic\PreparationVoiture\PreparationVoiture\obj\Debug\net6.0\PreparationVoiture.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nanon\Documents\GitHubPublic\PreparationVoiture\PreparationVoiture\obj\Debug\net6.0\PreparationVoiture.AssemblyInfoInputs.cache
+C:\Users\nanon\Documents\GitHubPublic\PreparationVoiture\PreparationVoiture\obj\Debug\net6.0\PreparationVoiture.AssemblyInfo.cs
+C:\Users\nanon\Documents\GitHubPublic\PreparationVoiture\PreparationVoiture\obj\Debug\net6.0\PreparationVoiture.csproj.CoreCompileInputs.cache
+C:\Users\nanon\Documents\GitHubPublic\PreparationVoiture\PreparationVoiture\obj\Debug\net6.0\PreparationVoiture.dll
+C:\Users\nanon\Documents\GitHubPublic\PreparationVoiture\PreparationVoiture\obj\Debug\net6.0\refint\PreparationVoiture.dll
+C:\Users\nanon\Documents\GitHubPublic\PreparationVoiture\PreparationVoiture\obj\Debug\net6.0\PreparationVoiture.pdb
+C:\Users\nanon\Documents\GitHubPublic\PreparationVoiture\PreparationVoiture\obj\Debug\net6.0\PreparationVoiture.genruntimeconfig.cache
+C:\Users\nanon\Documents\GitHubPublic\PreparationVoiture\PreparationVoiture\obj\Debug\net6.0\ref\PreparationVoiture.dll
