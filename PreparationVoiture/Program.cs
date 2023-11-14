@@ -1,74 +1,84 @@
 ﻿using System;
 
-class Voiture
+namespace PreparationVoiture
 {
-    //Propriété de ttes les voitures
-    public string Modele { get; set; }
-    public string Motorisation { get; set; }
-    public string Couleur { get; set; }
-
-
-    //ici je fais le constructeur
-    public Voiture (string modele, string motorisation, string couleur)
-    {
-        this.Modele = modele;
-        this.Motorisation = motorisation;
-        this.Couleur = couleur;
-    }
-    
-    //methode d'afficahge de détail de la voiture
-    public virtual void AfficherDetail()
-    {
-        Console.WriteLine($"Voiture {Modele} de couleur {Motorisation} ayant pour motorisation {Motorisation}");
-    }
-}
-
-class VoitureCustom : Voiture
-{
-    public string KitCustomisation { get; set; }
-
-    public VoitureCustom(string modele, string motorisation, string couleur, string kitCustomisation) : base(modele, motorisation, couleur)
-    {
-        //attention a maj K et lowercase k
-        KitCustomisation = kitCustomisation;
-    }
-
-    public override void AfficherDetail()
-    {
-        base.AfficherDetail();
-        Console.WriteLine($"Avec le kit de customisation : {KitCustomisation}");
-    }
-
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            //on va demander les détails du modèle, motorisation, coueleur et le kit
-            Console.Write("Entrez le modèle de la voiture :");
-            string modele = Console.ReadLine();
+            int Voiture = 1;
+            int Moto = 2;
+            int Sortir = 5;
 
-            Console.Write("Entrez la motorisation de la voiture :");
-            string motorisation = Console.ReadLine();
+            Console.Write("---Bienvenue sur notre préparateur de voiture" + "\n" + "\n");
+            Console.Write("Veuillez sélectionner un type de véhicule suivie de la touche ENTRER" +
+                    "\n" + "\n" + "1 Voiture" + "\n" + "2 Moto " + "\n" + "5 Sortir" + "\n");
 
-            Console.Write("Entrez la couleur de la voiture :");
-            string couleur = Console.ReadLine();
+            int OptionVehicule = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Voulez-vous y ajouter un kit de customisation ? (Oui/Non) : ");
-            string reponseKit= Console.ReadLine();
-            string kitCustomisation = (reponseKit.ToLower()  == "oui" ? "Kit Sport" : "Rien");
-
-            Voiture voiture;
-            if (kitCustomisation == "Aucun")
+            while (OptionVehicule != Voiture && OptionVehicule != Sortir)
             {
-                voiture = new Voiture(modele,motorisation, couleur);
-            }
-            else
-            {
-                voiture = new VoitureCustom(modele,motorisation, couleur, kitCustomisation);
+                Console.Clear();
+                Console.Write("Option non existante !" + "\n" + "veuillez choisir une option marquée" + "\n");
+                Console.Write("Veuillez sélectionner un type de véhicule suivie de la touche ENTRER" +
+                    "\n" + "\n" + "1 Voiture" + "\n" +  "2 Moto " + "\n" + "5 Sortir" + "\n");
+                OptionVehicule = Convert.ToInt32(Console.ReadLine());
             }
 
-            Console.WriteLine("\nRécapitulatif de la voiture : ");
-            voiture.AfficherDetail();
+            if (OptionVehicule == Voiture)
+            {
+                Console.Clear();
+                Console.Write("-Vous avez choisi une voiture !" + "\n" + "\n");
+
+                // Créer une instance de la classe Véhicule ou VoitureCustom selon les besoins
+                Console.Write("Entrez le modèle de la voiture : ");
+                string modele = Console.ReadLine();
+
+                Console.Write("Entrez la motorisation de la voiture : ");
+                string motorisation = Console.ReadLine();
+
+                Console.Write("Entrez la couleur de la voiture : ");
+                string couleur = Console.ReadLine();
+
+                Console.Write("Voulez-vous y ajouter un kit de customisation ? (Oui/Non) : ");
+                string reponseKit = Console.ReadLine();
+                string kitCustomisation = (reponseKit.ToLower() == "oui" ? "Kit Sport" : "Rien");
+
+                Véhicule vehicule;
+
+                if (OptionVehicule == Moto) 
+                
+                { 
+                    Console.Clear();
+                    Console.Write("Entrez le modèle de la belle Moto :");
+                    modele = Console.ReadLine();
+
+                    Console.Write("Entrez la motorisation de la Moto : ");
+                    motorisation = Console.ReadLine();
+
+                    Console.Write("Entrez la couleur de la Moto : ");
+                    couleur = Console.ReadLine();
+
+                    Console.Write("Voulez-vous y ajouter un kit de customisation ? (Oui/Non) : ");
+                    reponseKit = Console.ReadLine();
+                    kitCustomisation = (reponseKit.ToLower() == "oui" ? "Kit Sport" : "Rien");
+
+                    Véhicule moto;
+
+                }
+
+                if (kitCustomisation == "Rien")
+                {
+                    vehicule = new Véhicule(modele, motorisation, couleur);
+                }
+                else
+                {
+                    vehicule = new VoitureCustom(modele, motorisation, couleur, kitCustomisation);
+                }
+
+                Console.WriteLine("\nRécapitulatif du véhicule : ");
+                vehicule.AfficherDetail();
+            }
 
             Console.ReadLine();
         }
